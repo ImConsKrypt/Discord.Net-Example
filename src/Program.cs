@@ -2,9 +2,14 @@
 
 namespace Example
 {
-    class Program
+        class Program
     {
-        public static Task Main(string[] args)
-            => Startup.RunAsync(args);
+        static void Main(string[] args)
+            => new Program().MainAsync(args).GetAwaiter().GetResult();
+
+        public async Task MainAsync(string[] args)
+        {
+            await Startup.RunAsync(args);
+        }
     }
 }
