@@ -54,6 +54,7 @@ namespace Example
             }))
             .AddSingleton<StartupService>()         // Add startupservice to the collection
             .AddSingleton<LoggingService>()         // Add loggingservice to the collection
+	    .AddSingleton<CommandHandler>()         // Add commandhandler to the collection
             .AddSingleton<Random>()                 // Add random to the collection
             .AddSingleton(Configuration);           // Add the configuration to the collection
         }
